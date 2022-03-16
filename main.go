@@ -14,5 +14,5 @@ func main() {
 }
 
 func goServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "404 ish")
+	fmt.Fprint(w, "405")
 }
