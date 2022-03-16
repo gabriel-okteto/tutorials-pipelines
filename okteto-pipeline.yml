@@ -1,0 +1,8 @@
+deploy:
+  - echo namespace === ${OKTETO_NAMESPACE}
+  - echo gitbranch === ${OKTETO_GIT_BRANCH}
+  - echo gitcommit === ${OKTETO_GIT_COMMIT}
+  - echo registry  === ${OKTETO_REGISTRY_URL}
+  - echo buildkit  === ${BUILDKIT_HOST}
+  - okteto build -t okteto.dev/go-start:latest
+  - kubectl apply -f k8s
